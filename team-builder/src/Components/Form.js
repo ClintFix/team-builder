@@ -14,7 +14,7 @@ export default function Form(props) {
     }
 
     return (
-        <div className ='form container' onSubmit={onSubmit}>
+        <form className ='form container' onSubmit={onSubmit}>
             <label> Name  
                 <input
                     name='name' //must match key that we're expecting in initialFormValues settings
@@ -41,6 +41,7 @@ export default function Form(props) {
                     <option value='Back-end Engineer'>Back-end Engineer</option>
                 </select>
             </label>
-        </div>
+            <button disabled={!values.name || !values.email || !values.role }>submit</button>
+        </form>
     )
 }
